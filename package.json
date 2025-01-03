@@ -1,0 +1,54 @@
+{
+  "name": "vite-plugin-git-info-env",
+  "version": "0.0.1",
+  "description": "A Vite plugin to inject git info into your app",
+  "engines": {
+    "node": ">=18"
+  },
+  "homepage": "https://github.com/jinbekim/vite-plugin-git-info#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinbekim/vite-plugin-git-info.git"
+  },
+  "main": "/dist/index.js",
+  "scripts": {
+    "build": "tsup"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./client": {
+      "types": "./importMeta.d.ts"
+    }
+  },
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "dts": true,
+    "format": [
+      "cjs",
+      "esm"
+    ]
+  },
+  "keywords": [
+    "vite-plugin",
+    "git"
+  ],
+  "files": [
+    "/dist",
+    "*.d.ts"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.0.13",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  },
+  "peerDependencies": {
+    "vite": "*"
+  }
+}
