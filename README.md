@@ -23,9 +23,9 @@ export default {
 // main.js
 
 console.log(
-  import.meta.env.VITE_GIT_BRANCH,
-  import.meta.env.VITE_GIT_TAG,
-  import.meta.env.VITE_GIT_COMMIT_HASH
+  import.meta.env.GIT_BRANCH,
+  import.meta.env.GIT_TAG,
+  import.meta.env.GIT_COMMIT,
 );
 ```
 
